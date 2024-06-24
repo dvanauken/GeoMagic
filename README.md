@@ -28,9 +28,21 @@ The chosen assumption for this implementation is Flexible Connections.
 
 ## Compilation and Build Instructions
 Ensure you have Java 18 or above and Maven 3.9.2 or above installed. Navigate to the project directory and run the following commands:
+
+### Clone the Repository:
+Use the following command to clone the repository to your local machine:
+```bash
+git clone https://github.com/dvanauken/GeoMagic.git
+```
+### Build the project
 ```bash
 mvn clean install
-java -jar target/GeoMagic-1.0-SNAPSHOT.jar
+mvn dependency:copy-dependencies
+```
+
+### Run the Application:
+```bash
+java -cp "target/classes;target/dependency/*" com.dbva.App
 ```
 ### Running Tests
 ```bash
